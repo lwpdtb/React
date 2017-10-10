@@ -102,3 +102,14 @@ browser.min.js 将 JSX 语法转为 JavaScript 语法
 ### Stateless Functional Component ###
 
 ***
+
+# 传递Props #
+ **...other**
+
+    var {checked , ...other} = this.props;//...other中是出了checked以外的所有的属性
+
+ **…this.props**
+   
+> 比...other多了不管有没有明确使用，即包含所有属性
+
+ 
