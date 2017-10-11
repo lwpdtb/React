@@ -112,4 +112,18 @@ browser.min.js 将 JSX 语法转为 JavaScript 语法
    
 > 比...other多了不管有没有明确使用，即包含所有属性
 
- 
+>     var player = {score: 1, name: 'Jeff'};
+>     
+>     var newPlayer = Object.assign({}, player, {score: 2});
+>     //现在 player 没改变, 但是 newPlayer 是 {score: 2, name: 'Jeff'}
+>     
+>     // 或者如果你使用对象扩展语法，可以写成：
+>     // var newPlayer = {...player, score: 2};
+
+
+***
+
+### 函数式组件 ###
+
+只包含一个 render 方法。而不是通过扩展 **React.Component** 类定义的，函数式组件只需编写一个函数，传入 **props**(属性) 并返回应该渲染的内容就可以了
+
